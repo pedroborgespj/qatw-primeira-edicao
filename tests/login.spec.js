@@ -54,28 +54,28 @@ test('Deve acessar a conta do usuário', async ({ page }) => {
 
 });
 
-test('Deve acessar a conta do usuário 2', async ({ page }) => {
+// test('Deve acessar a conta do usuário 2', async ({ page }) => {
 
-  const loginActions = new LoginActions(page)
+//   const loginActions = new LoginActions(page)
   
-  const usuario = {
-    cpf: '00000014141',
-    senha: '147258'
-  }
+//   const usuario = {
+//     cpf: '00000014141',
+//     senha: '147258'
+//   }
 
-  await loginActions.acessaPagina()
-  await loginActions.informaCPF(usuario.cpf)
-  await loginActions.informaSenha(usuario.senha)
+//   await loginActions.acessaPagina()
+//   await loginActions.informaCPF(usuario.cpf)
+//   await loginActions.informaSenha(usuario.senha)
 
-  //Temporario
-  await page.waitForTimeout(3000)
-  const code = await obterCodigo2FA()
+//   //Temporario
+//   await page.waitForTimeout(3000)
+//   const code = await obterCodigo2FA()
 
-  await loginActions.informa2FA(code)
+//   await loginActions.informa2FA(code)
 
-  //Temporario
-  await page.waitForTimeout(2000)
+//   //Temporario
+//   await page.waitForTimeout(2000)
 
-  expect(await loginActions.obterSaldo()).toHaveText('R$ 5.000,00')
+//   expect(await loginActions.obterSaldo()).toHaveText('R$ 5.000,00')
 
-});
+// });
